@@ -12,8 +12,14 @@ function hashFunc(data) {
     hash.update(data);
     return hash.digest('hex');
 }
-
-var start = Date.parse('Dec 06 2016 17:00:00 GMT+0800');
+const LIST = {
+    0: 'THE DOMAIN NAME SYSTEM',
+    1: 'ELECTRONIC MAIL',
+    2: 'THE WORLD WIDE WEB',
+    3: 'STREAMING AUDIO AND VIDEO',
+    4: 'CONTENT DELIVERY'
+};
+var start = Date.parse('Dec 06 2016 18:00:00 GMT+0800');
 var passbook = [];
 var choiceStatus = [];
 var records = [];
@@ -31,8 +37,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.static('node_modules/material-design-lite'));
 
-app.get('/list', function(req, res) {
-    res.send(JSON.stringify(choiceStatus));
+app.get('/spec', function(req, res) {
+    var spec = {status: choiceStatus, start: start};
+    res.send(JSON.stringify(spec));
 });
 
 
@@ -80,10 +87,12 @@ app.post('/record', function(req, res) {
     console.log(req.body);
 
     var exist = false;
+    var choice = '';
     if(info != '') {
         for(var i of records) {
             if(i.info == info) {
                 exist = true;
+                choice = i.choice;
             }
         }
         if(!exist) {
@@ -96,7 +105,7 @@ app.post('/record', function(req, res) {
                 return res.send('已经没有位置了，换一个吧');
             }
         }else{
-            return res.send('你已经选过啦');
+            return res.send('你已经选过啦 -> ' + LIST[i.choice]);
         }
 
     }

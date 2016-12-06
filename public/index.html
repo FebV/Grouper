@@ -48,7 +48,9 @@
 
         <div class="mdl-cell mdl-cell--12-col"></div>
 
-        <span class="mdl-cell mdl-cell--12-col" style="text-align:center" id="info">Personal info</span>
+        <span class="mdl-cell mdl-cell--12-col" style="text-align:center" id="info">理论上来说这里会有你的名字</span>
+        <span class="mdl-cell mdl-cell--12-col" style="text-align:center" id="info">点完就不能改了！</span>
+        
 
         <div class="mdl-cell mdl-cell--4-col"></div>
 
@@ -145,7 +147,7 @@
         </div>
 
     </div>
-        <div class="mdl-cell mdl-cell--12-col">View code on <a href="#">GitHub</a></div>    
+        <div class="mdl-cell mdl-cell--4-col" style="margin:auto;text-align:center">View code on <a href="https://github.com/FebV/Grouper">GitHub</a></div>    
 </div>
     <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
         <div class="mdl-snackbar__text"></div>
@@ -159,7 +161,7 @@ var $ = function(ele) {
 }
 var timeUp = false;
 var status = 'lock';
-var start = Date.parse('Dec 06 2016 17:00:00 GMT+0800');
+var start = Date.parse('Dec 30 2016 17:00:00 GMT+0800');
 var token = '';
 
 function init() {
@@ -179,15 +181,16 @@ function init() {
 
 function loadStatus() {
     var xml = new XMLHttpRequest();
-    xml.open('GET', 'list');
+    xml.open('GET', 'spec');
     xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xml.send();
     xml.onload = function() {
         var result = JSON.parse(xml.responseText);
+        var set = result.status;
         for(var i = 0; i < 5; i++){
-            $('left'+i).innerHTML = result[i];
-
+            $('left'+i).innerHTML = set[i];
         }
+        start = result.start;
         
     }
 
