@@ -19,12 +19,12 @@ const LIST = {
     3: 'STREAMING AUDIO AND VIDEO',
     4: 'CONTENT DELIVERY'
 };
-var start = Date.parse('Dec 06 2016 18:00:00 GMT+0800');
+var start = Date.parse('Dec 07 2016 22:00:00 GMT+0800');
 var passbook = [];
 var choiceStatus = [];
 var records = [];
 for(var i = 0; i < 5; i++) {
-    choiceStatus[i] = 3;
+    choiceStatus[i] = 8;
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
