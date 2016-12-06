@@ -1,0 +1,283 @@
+<!-- Simple Textfield -->
+<html>
+<header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="font.css">
+</header>
+
+<body>
+    <div class="mdl-grid" style="text-align:center;margin:auto">
+        
+        <div class="mdl-cell mdl-cell--12-col" >
+            计算机网络展示分组
+        </div>
+
+        <div class="mdl-cell"></div>
+    
+
+        <div class="mdl-cell mdl-cell--12-col" >
+            倒计时: <span id="leftTime">Not sure</span>
+        </div>
+
+        <div class="mdl-cell mdl-cell--12-col">
+
+            <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                <input class="mdl-textfield__input" type="text" id="snum">
+                <label class="mdl-textfield__label" for="sample1">学号</label>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col"></div>
+            <div class="mdl-cell mdl-cell--4-col"></div>
+
+            
+            <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+                <input class="mdl-textfield__input" type="password" id="spass">
+                <label class="mdl-textfield__label" for="sample1">选课密码</label>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col"></div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col"></div>
+        <div class="mdl-cell mdl-cell--12-col">不会看你密码的～</div>
+
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-cell mdl-cell--4-col" style="margin:auto" id="login">
+            Login
+        </button>
+
+        <div class="mdl-cell mdl-cell--12-col"></div>
+
+        <span class="mdl-cell mdl-cell--12-col" style="text-align:center" id="info">Personal info</span>
+
+        <div class="mdl-cell mdl-cell--4-col"></div>
+
+                
+        <div class="mdl-cell mdl-cell--12-col"></div>
+
+
+        <div style="text-align:left; margin:auto">
+
+        <div class="demo-card-wide mdl-card mdl-shadow--4dp" style="min-height:0px">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">7.1 THE DOMAIN NAME SYSTEM</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                剩余人数: <span id="left0"></span>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pick-btn" id="choice0">
+                    Pick!
+               </button>
+            </div>
+        </div>
+
+        <div class="mdl-cell"></div>
+
+        <div class="demo-card-wide mdl-card mdl-shadow--4dp" style="min-height:0px">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">7.2 ELECTRONIC MAIL</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                剩余人数: <span id="left1"></span>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pick-btn" id="choice1">
+                    Pick!
+               </button>
+            </div>
+        </div>
+
+        <div class="mdl-cell"></div>
+        
+        <div class="demo-card-wide mdl-card mdl-shadow--4dp" style="min-height:0px">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">7.3 THE WORLD WIDE WEB</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                剩余人数: <span id="left2"></span>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pick-btn" id="choice2">
+                    Pick!
+               </button>
+            </div>
+        </div>
+        
+        <div class="mdl-cell"></div>
+        
+        <div class="demo-card-wide mdl-card mdl-shadow--4dp" style="min-height:0px">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">7.4 STREAMING AUDIO AND VIDEO</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                剩余人数: <span id="left3"></span>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pick-btn" id="choice3">
+                    Pick!
+               </button>
+            </div>
+        </div>
+        
+        <div class="mdl-cell"></div>
+
+        
+        <div class="demo-card-wide mdl-card mdl-shadow--4dp" style="min-height:0px">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">7.5 CONTENT DELIVERY</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                剩余人数: <span id="left4"></span>
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pick-btn" id="choice4">
+                    Pick!
+               </button>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+        <div class="mdl-cell mdl-cell--12-col">View code on <a href="#">GitHub</a></div>    
+</div>
+    <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+    </div>
+
+<script src="material.min.js"></script>
+<script>
+var $ = function(ele) {
+    return document.getElementById(ele);
+}
+var timeUp = false;
+var status = 'lock';
+var start = Date.parse('Dec 06 2016 17:00:00 GMT+0800');
+var token = '';
+
+function init() {
+    check();
+    setInterval(check, 200);
+    $('login').onclick = login;
+    var pickBtn = document.getElementsByClassName('pick-btn');
+    for(var i in pickBtn) {
+        pickBtn[i].disabled = true;
+        pickBtn[i].onclick = function() {
+            pick(this.id[6]);
+        }
+    }
+    loadStatus();
+    setInterval(loadStatus, 1000);
+};
+
+function loadStatus() {
+    var xml = new XMLHttpRequest();
+    xml.open('GET', 'list');
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send();
+    xml.onload = function() {
+        var result = JSON.parse(xml.responseText);
+        for(var i = 0; i < 5; i++){
+            $('left'+i).innerHTML = result[i];
+
+        }
+        
+    }
+
+}
+
+function login() {
+    var xml = new XMLHttpRequest();
+    xml.open('POST', 'login');
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send('snum='+$('snum').value+'&spass='+$('spass').value+'');
+    xml.onload = function() {
+        if(xml.responseText != 'fail') {
+            var result = JSON.parse(xml.responseText);
+            token = result.token;
+            load(result.info);
+            status = 'login';
+            var pickBtn = document.getElementsByClassName('pick-btn');
+            for(var i in pickBtn) {
+                pickBtn[i].disabled = false;
+            }
+            showMsg('登录成功');
+        }else{
+            load('认证失败');
+            showMsg('认证失败');            
+        }
+    }
+}
+
+function pick(id) {
+var xml = new XMLHttpRequest();
+    xml.open('POST', 'record');
+    xml.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xml.send('token='+token+'&choice='+id);
+    xml.onload = function() {
+        showMsg(xml.responseText);
+    }
+}
+
+
+function check() {
+    var now = Date.now();
+    if(start > now) {
+        $('leftTime').innerHTML = secondToTime((start - now) / 1000);
+        lock(true);
+        timeUp = false;
+    }else{
+        $('leftTime').innerHTML = '0';
+        status = 'wait'
+        lock(false);
+        timeUp = true;
+    }
+}
+function lock(flag) {
+    $('login').disabled = flag;
+}
+
+function load(result) {
+    $('info').innerHTML = result;
+}
+
+function secondToTime(second) {
+    var value = second;
+    var cali = '秒';
+
+    if (second > 60) {
+        value /= 60;
+        cali = '分';
+    }
+    if(second > 60 * 60) {
+        value /= 60;
+        cali = '时'
+    }
+    if(second > 60 * 60 * 24){ 
+         value /= 24;
+         cali = '天';
+    }
+    return value.toFixed(2) + ' ' + cali;
+}
+
+init();
+var notification = document.querySelector('.mdl-js-snackbar');
+function showMsg(data) {
+    setTimeout(
+        function(){
+            notification.MaterialSnackbar.showSnackbar({
+                message: data
+            }
+        )}, 200);
+}
+
+</script>
+</body>
+</html>

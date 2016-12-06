@@ -1,0 +1,20 @@
+{
+  "name": "ticket",
+  "version": "0.0.0",
+  "description": "small tool for pick computer class presentation in group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "private"
+  ],
+  "author": "FebV",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "material-design-lite": "^1.2.1",
+    "request": "^2.79.0"
+  }
+}
