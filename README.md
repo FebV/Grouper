@@ -4,7 +4,7 @@ for deviding classmates into seperated groups(in order to compose presentation o
 using nodejs/express on server side  
 using material design lite on frontend  
 using md5 with time seed generated token to provent csrf or any other attack  
-
+friendly to mobile browsers(and old version domestic browsers like QQ browser)  
 
 ## build  
 npm install  
@@ -19,3 +19,4 @@ check access.log, login.log, record.log to look up current records
 
 ## status  
 deprecated  
+there is bugs when user pick groups the second time, the content on tips could be wrong sometimes  
